@@ -1,0 +1,123 @@
+span {
+	@extend %text;
+}
+
+button {
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.playbackTime,
+#fastFwd {
+	color: white;
+}
+
+
+.videoWrapper {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#volume,
+#fullScreen {
+	float: right;
+	clear: left;
+}
+
+#btnControls {
+	width: 100%;
+}
+
+.captions {
+	margin: 20px;
+}
+
+#video {
+	width: 100%;
+}
+
+.pauseBtn,
+#soundOn  {
+	display: none;
+}
+
+#playerControls {
+	position: relative;
+	bottom: 55px;
+	margin: auto;
+	width: 100%;
+}
+
+
+video::-webkit-media-controls-enclosure {
+	display: none !important;
+}
+
+#playerControls div {
+	display: inline-block;
+}
+
+.progressBar {
+	width: 100%;
+}
+
+
+#progressBar {
+	-webkit-appearance: none;
+	display: block;
+	width: 98%;
+	top: -10px;
+	background-color: $caption-color;
+	height: 7px;
+	position: relative;
+	bottom: 50px;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+#progress {
+	background-color: $highlight-color;
+	position: absolute;
+	top: -3px;
+	left: 1%;
+	-webkit-appearance: none;
+	height: 7px;
+	z-index: 1;
+	pointer-events: none;
+	width: 98%;
+	border-radius: 10px;
+}
+
+#progressBar::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	background-color: $highlight-color;
+	width: 7px;
+	height: 7px;
+	cursor: pointer;
+}
+
+#progressBar::-moz-range-thumb {
+	visibility: hidden !important;
+}
+
+.highlight {
+	color: $highlight-color;
+}
+
+#videoWrapper {
+	width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
