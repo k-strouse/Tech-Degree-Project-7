@@ -50,6 +50,9 @@ video::-webkit-media-controls-enclosure {
 .progressBar {
   width: 100%; }
 
+input:focus {
+  outline: none; }
+
 #progressBar {
   -webkit-appearance: none;
   display: block;

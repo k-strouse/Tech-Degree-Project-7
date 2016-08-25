@@ -63,6 +63,9 @@ video::-webkit-media-controls-enclosure {
 	width: 100%;
 }
 
+input:focus {
+	outline: none;
+}
 
 #progressBar {
 	-webkit-appearance: none;
@@ -109,7 +112,6 @@ video::-webkit-media-controls-enclosure {
 #videoWrapper {
 	width: 80%;
 }
-
 
 
 
