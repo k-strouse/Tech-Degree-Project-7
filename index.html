@@ -12,10 +12,10 @@
 
   <body>
   	<div id="videoWrapper" class="videoWrapper">
-   		<video id="video" autoplay>
-   			<source src="vid/video.mp4" type="video/mp4">
-   			<source src="vid/video.ogg" type="video/ogg">
-   			<track  label="Captions" kind="subtitles" srclang="en" src="vid/captions.vtt">
+   		<video id="video" autoplay loop preload="metadata">
+   			<source src="vid/video.mp4" type="video/mp4" />
+   			<source src="vid/video.ogg" type="video/ogg" />
+   			<track  label="Captions" kind="captions" srclang="en" src="vid/captions.vtt">
    		</video>
 
 <!--*********************CONTROLS********************-->
@@ -55,6 +55,12 @@
             </button>
             <button id="soundOn" title="Enable Audio">
               <img src="img/volume-off-icon.png">
+            </button>
+          </div>
+
+          <div id="CC" class="CC">
+            <button id="captionBtn" title="Captions">
+              <img src="img/Closed Captioning-22.png">
             </button>
           </div>
 

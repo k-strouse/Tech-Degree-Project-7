@@ -21,7 +21,8 @@ button {
 }
 
 #volume,
-#fullScreen {
+#fullScreen,
+#CC {
 	float: right;
 	clear: left;
 }
@@ -31,7 +32,8 @@ button {
 }
 
 .captions {
-	margin: 20px;
+	margin: 0 auto;
+	width: 85%
 }
 
 #video {
@@ -67,6 +69,7 @@ input:focus {
 	outline: none;
 }
 
+
 #progressBar {
 	-webkit-appearance: none;
 	display: block;
@@ -80,10 +83,11 @@ input:focus {
 	margin: 0 auto;
 }
 
+
+
 #progress {
 	background-color: $highlight-color;
 	position: absolute;
-	top: -3px;
 	left: 1%;
 	-webkit-appearance: none;
 	height: 7px;
@@ -91,7 +95,9 @@ input:focus {
 	pointer-events: none;
 	width: 98%;
 	border-radius: 10px;
+	margin-right: 10%;
 }
+
 
 #progressBar::-webkit-slider-thumb {
 	-webkit-appearance: none !important;
@@ -110,8 +116,11 @@ input:focus {
 }
 
 #videoWrapper {
-	width: 80%;
+	width: 85%;
+	padding-top: 10px;
 }
+
+
 
 
 

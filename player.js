@@ -2,14 +2,16 @@ var video = document.getElementById('video');
 var fastFwd = document.getElementById('fastFwd');
 var videoWrapper = document.getElementById('videoWrapper');
 var progressBar = document.getElementById('progressBar');
-var $video = $("#video");var progress = document.getElementById('progress');$btnControls = $('#btnControls');
+var $video = $("#video");
+var progress = document.getElementById('progress');
+var $btnControls = $('#btnControls');
 var $vidWrapper2 = $('#vidWrapper2');
 var $videoWrapper = $('#videoWrapper');
 var $playerControls = $('#playerControls');
 var $progressBar = $('#progressBar');
 var $track = $('#track');
 var $progress = $('#progress');
-
+var	captionBtn = document.getElementById("captionBtn");
 
 //Play/Pause button
 
@@ -95,6 +97,49 @@ document.getElementById('fullBtn').addEventListener('click', function() {
 		$video[0].webkitRequestFullScreen();
 	}
 });
+
+
+
+//---------------Captions--------------------------------
+
+video.textTracks[0].mode = 'showing';
+
+function hideTracks() {
+	var video = document.getElementById('video');
+	for (i = 0; i < video.textTracks.length; i++) {
+		video.textTracks[0].mode = "hidden";
+	}
+};
+		
+	
+document.getElementById("captionBtn").addEventListener("click", function() {
+		if (video.textTracks[0].mode == 'hidden') {
+			hideTracks();
+			track = document.createElement("track");
+			track.kind = "captions";
+			track.label = "English";
+			track.srclang = "en";
+			track.src = "vid/captions.vtt";
+			video.appendChild(track); 
+			track.addEventListener("load", function() {
+				this.mode = "showing";
+				video.textTracks[0].mode = "showing";
+			});
+			console.log('==showing')
+		} else if (video.textTracks[0].mode = 'showing') {
+				hideTracks();
+				console.log('==hidden')
+			}
+	});
+
+
+
+
+
+
+
+
+
 
 //---------------Progress Bar--------------------------------
 video.addEventListener('timeupdate', updateProgressBar, false);
