@@ -12,6 +12,7 @@ var $progressBar = $('#progressBar');
 var $track = $('#track');
 var $progress = $('#progress');
 var	captionBtn = document.getElementById("captionBtn");
+var $slider = $('#slider');
 
 //Play/Pause button
 
@@ -85,6 +86,10 @@ document.getElementById('volume').addEventListener('click', function() {
 		$('#soundOff').hide();
 	}
 	false;
+});
+
+$slider.on("change", function(){ 
+	$video[0].volume = $slider[0].value;
 });
 
 //---------------Full Screen--------------------------------
@@ -161,8 +166,11 @@ progressBar.addEventListener("change", function() {
 
 video.addEventListener("timeupdate", function() { 
 	var value = Math.floor((100 / this.duration) * this.currentTime);
-	$('#progress').css("width", value+"%");	
-}); 
+	$('#progress').css("width", value+"%");
+	$('#progress').css('display', 'block', '!important');	
+});
+
+
 
 
 //---------------Video Transcript--------------------------------
@@ -236,6 +244,9 @@ $videoWrapper.on("mouseover", function() {
 		$progressBar.css('top', '-10px'); 
 });
 
+if($video[0].currentTime == 0) {
+	$progress.css('display', 'none');
+} 
 
 
 

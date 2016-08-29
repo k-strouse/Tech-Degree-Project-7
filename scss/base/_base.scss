@@ -1,5 +1,8 @@
 span {
 	@extend %text;
+	@media (max-width: 721px) {
+		font-size: 1em;
+	}	
 }
 
 button {
@@ -22,7 +25,8 @@ button {
 
 #volume,
 #fullScreen,
-#CC {
+#CC,
+#volSlider {
 	float: right;
 	clear: left;
 }
@@ -32,15 +36,21 @@ button {
 }
 
 .captions {
-	margin: 0 auto;
-	width: 85%
+	position: relative;
+	z-index: 100;
+	margin: auto;
+	margin-top: -60px;
+	width: 85%;
+	@media (max-width: 721px) {
+		width: 95%;
+	}
 }
 
 #video {
 	width: 100%;
 }
 
-.pauseBtn,
+.playBtn,
 #soundOn  {
 	display: none;
 }
@@ -118,8 +128,36 @@ input:focus {
 #videoWrapper {
 	width: 85%;
 	padding-top: 10px;
+	@media (max-width: 721px) {
+		width: 95%;
+	}
 }
 
+#fastFwd {
+	@media (max-width: 440px) {
+		display: none;
+	}
+}
+
+#slider {
+	width: 100px;
+	@media (max-width: 440px) {
+		width: 50px;
+	}
+}
+
+//****************************  Firefox Styling 				
+
+
+@-moz-document url-prefix() {
+	#progressBar {
+		height: 4px;
+	}
+}
+
+input[type=range]::-moz-focus-outer {
+	border: 0;
+}
 
 
 

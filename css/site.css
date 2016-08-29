@@ -3,6 +3,10 @@ span {
   font-size: 1.25em;
   color: #a6a6a6; }
 
+@media (max-width: 721px) {
+  span {
+    font-size: 1em; } }
+
 button {
   border: none;
   background: none;
@@ -19,7 +23,8 @@ button {
 
 #volume,
 #fullScreen,
-#CC {
+#CC,
+#volSlider {
   float: right;
   clear: left; }
 
@@ -27,13 +32,19 @@ button {
   width: 100%; }
 
 .captions {
-  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  margin: auto;
+  margin-top: -60px;
   width: 85%; }
+  @media (max-width: 721px) {
+    .captions {
+      width: 95%; } }
 
 #video {
   width: 100%; }
 
-.pauseBtn,
+.playBtn,
 #soundOn {
   display: none; }
 
@@ -95,5 +106,24 @@ input:focus {
 #videoWrapper {
   width: 85%;
   padding-top: 10px; }
+  @media (max-width: 721px) {
+    #videoWrapper {
+      width: 95%; } }
+
+@media (max-width: 440px) {
+  #fastFwd {
+    display: none; } }
+
+#slider {
+  width: 100px; }
+  @media (max-width: 440px) {
+    #slider {
+      width: 50px; } }
+
+@-moz-document url-prefix() {
+  #progressBar {
+    height: 4px; } }
+input[type=range]::-moz-focus-outer {
+  border: 0; }
 
 /*# sourceMappingURL=site.css.map */
