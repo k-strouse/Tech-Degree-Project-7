@@ -11,11 +11,15 @@ button {
 	outline: none;
 }
 
-.playbackTime,
-#fastFwd {
+.playbackTime {
 	color: white;
 }
-
+#fastFwd {
+	color: white;
+		@media (max-width: 440px) {
+		display: none;
+	}
+}
 
 .videoWrapper {
 	width: 100%;
@@ -133,17 +137,16 @@ input:focus {
 	}
 }
 
-#fastFwd {
-	@media (max-width: 440px) {
-		display: none;
-	}
-}
 
 #slider {
 	width: 100px;
 	@media (max-width: 440px) {
 		width: 50px;
 	}
+}
+
+span {
+	cursor: pointer;
 }
 
 //****************************  Firefox Styling 				
@@ -158,6 +161,8 @@ input:focus {
 input[type=range]::-moz-focus-outer {
 	border: 0;
 }
+
+
 
 
 

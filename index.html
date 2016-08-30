@@ -1,6 +1,7 @@
+<!--  Project was tested/viewed with Chrome, Safari and Firefox    -->
+
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <title>Vanilla JS Video Player</title>
@@ -9,7 +10,6 @@
     <link rel="stylesheet" href="css/site.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
-
   <body>
   	<div id="videoWrapper" class="videoWrapper">
    		<video id="video" loop preload="metadata">
@@ -25,53 +25,42 @@
           <input type="range" id="progressBar" value="0">
           <div id='progress'></div>
         </div>
-
         <div id='btnControls'>
-
           <div class="play_pause">
             <button id="play" class="playBtn" title="Pause">
-              <img src="img/play-icon.png">
+              <img src="img/play-icon.png" alt='Play'>
             </button>
              <button id="pause" class="pauseBtn" title="Play">
-              <img src="img/pause-icon.png">
+              <img src="img/pause-icon.png" alt='Pause'>
             </button>
           </div>
-
     			<div class="playbackTime">
     				<div id="time" class="current">00:00 /</div>
     				<div id="duration" class="duration">00:59</div>
             <button id="fastFwd">1X Speed</button>
     			</div>
-
           <div id="fullScreen" class="fullScreen">
             <button id="fullBtn" title="Full Screen">
-              <img src="img/fullscreen-icon.png">
+              <img src="img/fullscreen-icon.png" alt='Full Screen'>
             </button>
           </div>
-
           <div id='volSlider'>
             <input type='range' id='slider' min='0' max='1' step='0.01' value='1'>
           </div>
-
           <div id="volume" class="volume">
             <button id="soundOff" title="Mute">
-              <img src="img/volume-on-icon.png">
+              <img src="img/volume-on-icon.png" alt='Volume On'>
             </button>
             <button id="soundOn" title="Enable Audio">
-              <img src="img/volume-off-icon.png">
+              <img src="img/volume-off-icon.png" alt='Volume Off'>
             </button>
           </div>
-
-
-
           <div id="CC" class="CC">
             <button id="captionBtn" title="Captions">
-              <img src="img/Closed Captioning-22.png">
+              <img src="img/closedCaptioning-22.png" alt='Closed Captioning'>
             </button>
           </div>
-
         </div>
-
       </div> 
     </div>
 
@@ -101,42 +90,7 @@
       <span data-time='57.78'>A few common residential modems are DSL or</span>
 		</p>
 	</div>
-
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="player.js"> </script>
-
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
